@@ -1,0 +1,35 @@
+# BEGIN WordPress
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+
+    ## Redirect from the `http://` -> `https://`
+    ## Uncomment below if site has ssl sertificate
+    #RewriteCond %{HTTPS} !=on
+    #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
+    ## Prevents serving dotfiles. It was universal for all
+    ## dotfiles, but since Letsencrypt wants to access dotfiles
+    ## while validation we protect only those files.
+    ## OqilaOS server Apache configurations already have this
+    ## rule. So uncomment it when you are serving the app in other
+    ## hostings.
+    #RedirectMatch 403 /\.git.*$
+</IfModule>

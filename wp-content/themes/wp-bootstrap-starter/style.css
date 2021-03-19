@@ -1,0 +1,1242 @@
+/*
+Theme Name: WP Bootstrap Starter
+Theme URI: https://afterimagedesigns.com/wp-bootstrap-starter/
+Author: Afterimage Designs
+Author URI: https://afterimagedesigns.com/
+Description:  The best WordPress starter theme based on the most powerful frameworks in the world: "_s" (by Automattic, the main people behind WordPress development), Twitter Bootstrap (the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web) and Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for easy scalable vector graphics on websites). This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated. Page templates includes Right-sidebar (default page template), Left-Sidebar, Full-Width, Blank with container, Blank without container Page. Other features - Currently using Bootstrap v4.0.0 , Widgetized footer area, WooCommerce ready, Compatible with Contact Form 7, Compatible with Visual Composer, Compatible with Elementor Page Builder. This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
+Version: 3.3.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wp-bootstrap-starter
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Tested up to: 5.4
+Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[TABLE OF CONTENTS]
+
+	1. Global Styles
+    2. Buttons
+    3. Preloaders
+    4. Header Section
+        4.1. Header and Sticky Bar
+        4.2. Logo
+        4.3. Main Menu
+    5. Top Section
+    6. About Us Section
+    7. Product Section
+    8. Our Process Section
+    9. Gallery Section
+    10. Progress Counter Section
+	11. Meet The Team Section
+    12. Testimonial Section
+    13. Blog Section
+    14. Blog Single Section
+    15. Coupon/contacts Section
+    16. Purchase Section
+    17. Footer Section
+        17.1 Footer Top
+        17.2 Copyright
+
+-------------------------------------------------------------------*/
+
+
+/*-----------------------------
+ 1. Global Styles
+-------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:200,400,700,800');
+
+body {
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #232323;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.h4, .h5, .h6, h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.clear {
+  clear: both;
+}
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+.padding-zero{
+    padding: 0 !important;
+}
+iframe{
+  border-width: 0px;
+}
+img {
+  max-width: 100%;
+}
+.site-content .row{
+  margin: 0;
+}
+.site-content.single-content{
+  padding: 14px 0;
+	background-color: yellow;
+}
+
+.chipsofic-content-block {
+  padding: 65px 0 95px;
+}
+.section-gray {
+  background-color: #F8F8F8;
+}
+
+.section-title h1 {
+  font-size: 45px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+	word-break: break-word;
+}
+.section-title h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+		word-break: break-word;
+}
+.chipsofic-subtitle {
+  color: #232323;
+  font-family: 'Raleway', sans-serif;
+  font-size: 23px;
+  font-weight: 200;
+}
+
+
+/*-----------------------------
+2. Buttons
+-------------------------------*/
+
+.chipsofic-small-btn {
+  background: #FFC527;
+  border: 1px solid #FFC527;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.chipsofic-small-btn:hover {
+  background: transparent;
+  color: #FFC527;
+}
+
+.chipsofic-form-btn {
+  background: #232323;
+  border-radius:0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top:10px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.chipsofic-form-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.chipsofic-purchase-btn ul {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.chipsofic-purchase-btn .fa {
+  color: #fff;
+  float: left;
+  font-size: 30px;
+  padding: 10px 20px 10px 15px;
+}
+.chipsofic-purchase-btn li {
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.chipsofic-purchase-btn li span {
+  font-weight: bold;
+}
+
+.chipsofic-purchase-btn {
+  background: #FFC527;
+  border-radius: 35px;
+  padding: 12px 25px 10px;
+  width: 50%;
+}
+
+.chipsofic-purchase-btn:hover{
+  background: #333;
+}
+.chipsofic-fullwidth-btn {
+  background: #FFC527;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 12px;
+}
+.chipsofic-fullwidth-btn:hover {
+  background: #232323;
+  color: #fff;
+}
+/*-----------------------------
+3. Preloaders
+-------------------------------*/
+.spinner {
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+  background-color: #fff;
+  border-radius: 100%;
+  height: 40px;
+  margin: 100px auto;
+  width: 40px;
+}
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0;
+    }
+}
+.chipsofic-site-preloader-wrap {
+  background: #FFC527 none repeat scroll 0 0;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+.chipsofic-site-preloader-wrap .spinner {
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  position: absolute;
+  top: 50%;
+}
+
+/*-----------------------------
+4. Header Section
+-------------------------------*/
+
+/* 4.1. Header and Sticky Bar */
+
+.header-area {
+ background-size: cover;
+ margin-top: -27px;
+}
+.header-area .cbp-af-header {
+  background: #2C2141;
+  height: 65px;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  top: auto;
+  overflow: visible;
+}
+.header-area .cbp-af-header .row{
+	justify-content: flex-end;
+}
+.header-area .cbp-af-header.cbp-af-header-shrink {
+  background: #2C2141;
+  /*border-bottom: 1px solid #FFC527;*/
+z-index: 1000000;
+}
+.header-area .cbp-af-header.cbp-af-header-shrink{
+	
+}
+.header-area .cbp-af-header h1 {
+  line-height: 0;
+}
+.header-area .cbp-af-header .main-menu li a {
+  padding: 21px 15px;
+}
+.header-area .cbp-af-header .main-menu li:nth-child(2)>ul.dropdown>li a{
+	padding: 15px!important;
+}
+.header-area .cbp-af-header .main-menu li ul.dropdown>li a{
+  padding: 15px 15px;
+}
+
+.header-area .cbp-af-header .logo img {
+  max-height: 55px;
+}
+div.overlay{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+	z-index: 0;
+    opacity: 0.7;
+    background: yellow;
+}
+/* 4.2. Logo */
+
+.logo {
+  padding: 3px 0;
+  text-transform: uppercase;
+}
+.logo img {
+  -webkit-transition: all 0.4s ease 0s;
+  max-height: 155px;
+  transition: all 0.4s ease 0s;
+}
+.logo a {
+  color: #494949;
+}
+.logo a:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  opacity: 0.8;
+}
+.logo h1 {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0;
+  padding: 0px;
+}
+
+/* 4.3. Main Menu */
+
+.main-menu, .footer-menu {
+  font-family: 'Raleway', sans-serif;
+  
+}
+.footer-menu{
+display: flex;	
+}
+.main-menu ul, .footer-menu ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.main-menu li, .footer-menu li {
+  display: inline-block;
+  position: relative;
+}
+.footer-menu li a,.main-menu li a {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 30px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main-menu li ul>li a {
+  padding: 12px;
+}
+
+.main-menu li:hover > a,.footer-menu li:hover > a {
+  color: #E5097F;
+  text-decoration: none;
+}
+.main-menu .active a, .footer-menu .active a {
+  color: #E5097F;
+}
+.responsive-menu-wrap {
+  display: none;
+}
+.main-menu ul.dropdown-menu{
+  /*top: auto!important;*/
+  height: 100%;
+  background: none;
+}
+.main-menu ul.dropdown-menu>li{
+  display: block;
+  position: relative;
+  color: black;
+  background: rgba(0,0,0,.8);
+}
+.main-menu ul>li:last-child>ul.dropdown-menu{
+	min-width: auto;
+}
+.main-menu ul>li:last-child>ul.dropdown-menu>li{
+width: max-content;
+}
+/*-----------------------------
+5. Top Section
+-------------------------------*/
+.top-area {
+  margin: auto;
+  padding:17.5% 0 14.5%;
+  width: 90%;
+}
+.top-area h1 {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 900;
+  line-height: 1.5;
+  text-transform: uppercase;
+ 
+}
+.top-area p {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.top-area .btn {
+  background: #FFC527;
+  border: 1px solid #FFC527;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 15px 40px;
+  text-transform: uppercase;
+}
+.top-area .btn:hover {
+  background: rgba(0,0,0,.3);
+  color: #fff;
+}
+
+.main-bg{
+    background: url('/wp-content/themes/wp-bootstrap-starter/img/banner-images/main-banner-1.png') no-repeat fixed center;
+}
+
+/*-----------------------------
+6  About Us Section
+-------------------------------*/
+.about-us-bg {
+    background: url('/wp-content/themes/wp-bootstrap-starter/img/banner-images/bg-products.png');
+    background-size: cover;
+    background-position: center;
+}
+.about-us-section{
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    padding-left: 30px;
+}
+.white-bg{
+     background-color: #fff;
+}
+.about-us-section a {
+  color: #333;
+  text-decoration: none;
+}
+.about-us-section h1, .single-product h1{
+  font-size: 45px;
+  line-height: 1;
+  margin-bottom:0;
+  text-transform: uppercase;
+  color: #E5097F;
+}
+.about-us-section h1 span{
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom:0;
+  text-transform: uppercase;
+}
+.about-us-section h2, .single-product h2 {
+  font-size: 26px;
+  font-weight: 200;
+  margin-top: 5px;
+  color: #E5097F;
+}
+.about-us-section h3, .single-product h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom:0;
+  color: #E5097F;
+}
+.about-us-section h3 span{;
+  font-weight: 700;
+}
+.about-us-section img {
+  -moz-transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  display: block;
+  margin: 0 auto;
+  max-width: 380px;
+  transition: all 0.9s;
+}
+.about-us-section img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.about-us-section i {
+  color: #BC0F21;
+  padding-right: 10px;
+}
+.about-us-section p {
+  padding-top: 5px;
+}
+
+/*-----------------------------
+7. Product Section
+-------------------------------*/
+
+.banner-cat-wrapper{
+    background-image: url('/wp-content/themes/wp-bootstrap-starter/img/banner-images/bg-products.png');
+    color: #000;
+}
+
+.banner-inner-content{
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.banner-img-wrapper{
+    padding-right: 0 !important;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-content-text{
+    background-color: #fff;
+}
+
+.category-title-color{
+    color: #E5097F;
+    margin-bottom: -7px !important;
+    text-transform: uppercase;
+}
+
+.cat-subtitle{
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.single-chips-item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.single-chips-item a:hover{
+  text-decoration: none;
+}
+.single-chips-item{
+   /* display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: normal;*/
+}
+
+.our-product{
+    background: url('/wp-content/themes/wp-bootstrap-starter/img/banner-images/bg-products.png') no-repeat center !important;
+}
+
+.product-wrapper{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.product-wrapper h2{
+    color: #fff;
+}
+.product-inner-content{
+    color: #fff !important;
+    padding: 20px 0px 10px 15px;
+}
+
+.product-in-content-color-green{
+    background-color: #1F9D44;
+}
+.product-in-content-color-orange{
+    background-color: #E07822;
+}
+.product-in-content-color-blue{
+    background-color: #1575BB;
+}
+.product-in-content-color-pink{
+    background-color: #A52141;
+}
+
+.product-in-content-color-yellow{
+    background-color: #DEB412;
+}
+
+.btn-cat-carousel{
+    background-color: #E5097F !important;
+    color: #fff;
+}
+
+
+.product-inner-content h3{
+    margin-top: 0px  !important;
+    margin-bottom: 0 !important;
+    color: #fff !important;
+}
+
+.product-card{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    margin-right: 10px;
+}
+
+.cat-disc{
+    margin-bottom: 5px !important;
+}
+
+.choose-our-chips-content-area {
+  margin-top:50px;
+}
+
+.choose-our-chips-content-area h3 {
+position: relative;
+	display: block;
+	font-size: 24px;
+  font-weight: 700;
+	height: auto;
+}
+.choose-our-chips-content-area .pricing {
+  font-size: 17px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  height: auto;
+	max-height: 30px
+}
+.choose-our-chips-content-area .pricing span {
+  font-weight: bold;
+}
+.choose-our-chips-content-area .pricing p span{
+  font-weight: normal;
+}
+.choose-our-chips-content-area img {
+  -moz-transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  max-width: 200px;
+  padding: 6px;
+  transition: all 0.9s;
+}
+.single-product hr{
+  width: 50%; border: 2px solid #FFC527; float: left;
+}
+.single-product div#main{
+  /*margin: 14px 0;*/
+  width: 100%;
+	background: #fff;
+	box-shadow: 0 0 10px #000000;
+}
+.product-thumb{
+padding-left: 0;
+}
+.product-thumb img{
+	min-height: 100%;
+	min-width: 100%;
+	object-fit: cover;
+}
+.product-descr{
+	display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+	padding: 20px 20px 0 0;
+}
+.product-descr p{
+  margin-top: 0;
+}
+.product-descr img, .product-descr span{
+  float: right;
+}
+
+/*-----------------------------
+8. Our Process Section
+-------------------------------*/
+
+.process-block {
+  background: url('/wp-content/themes/wp-bootstrap-starter/img/banner-images/video-bg.jpeg') no-repeat fixed center;
+  background-size: cover;
+}
+
+.process-block .fa {
+  font-size: 100px;
+  color: #FFC527;
+  cursor:pointer;
+}
+
+.process-block .fa:hover {
+  color: #fff;
+}
+
+.process-block h1, .process-block .chipsofic-subtitle {
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 60%;
+  max-width: 1150px;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 0px;
+}
+
+/*-----------------------------
+9 Gallery Section
+-------------------------------*/
+
+.gallery-lightbox {
+  display: block;
+  position: relative;
+}
+.gallery-lightbox img {
+  width: 100%
+}
+.gallery-lightbox i.fa {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: all 0.3s ease 0s;
+  color: #fff;
+  font-size: 25px;
+  left: 50%;
+  line-height: 1.5;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 60%;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  width: 20px;
+  z-index: -1;
+}
+.gallery-lightbox:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: all 0.2s ease 0s;
+  background: #FFC527 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease 0s;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
+}
+.gallery-lightbox:hover i.fa {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  top: 50%;
+  visibility: visible;
+  z-index: 2;
+}
+.gallery-lightbox:hover:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  opacity: 0.8;
+  visibility: visible;
+  z-index: 1;
+}
+
+.chipsofic-content-block.gallery-block {
+  padding: 45px 0 0;
+}
+.gallery-area {
+  margin-top: 50px;
+}
+.gallery-area .container-fluid, .gallery-area .col-lg-3, .gallery-area .col-md-6 {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+/*-----------------------------
+10. Progress Counter Section
+-------------------------------*/
+
+.counter-block {
+  background: #FFC527 url('/wp-content/themes/wp-bootstrap-starter/img/banner-images/progress-bg-yellow.png') no-repeat scroll center center;
+  color: #fff;
+}
+
+.counter-block h1, .counter-block .chipsofic-subtitle {
+  color: #fff;
+}
+
+.counter-block h2 {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 700;
+  margin: 0;
+}
+.chipsofic-counter-area {
+  margin-top: 50px;
+}
+.chipsofic-counter-area p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*-----------------------------
+11. Meet The Team Section
+-------------------------------*/
+.single-team-item {
+  color: #6e6e6e;
+  display: block;
+  margin-top: 50px;
+}
+.single-team-item h3 {
+  color: #222222;
+  font-size: 24px;
+  font-weight: 700;
+}
+.single-team-item h4 {
+  color: #6e6e6e;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+.single-team-item i.fa, .about-us-section i.fa {
+  font-size: 25px;
+  color: #E5097F;
+}
+.single-team-item i.fa:hover, .about-us-section i.fa:hover {
+  opacity: 0.8;
+}
+.single-team-item img {
+  -moz-transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #f8f8f8;
+  box-shadow: -2px 0 9px -2px #FFC527;
+  transition: all 0.9s;
+  width: 200px;
+}
+
+.single-team-item p {
+  color: #6e6e6e;
+}
+.single-team-item ul, .about-us-section ul {
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+.single-team-item ul li, .about-us-section ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.single-team-item ul li:last-child, .about-us-section ul li:last-child {
+  margin-right: 0px;
+}
+.single-team-item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.post-thumbnail{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-loop{
+    background-color: #E5097F;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+.product-loop h2{
+    color: #fff;
+}
+/*-----------------------------
+12. Testimonial Section
+-------------------------------*/
+.review-stars {
+  list-style: outside none none;
+  margin: 0 auto;
+  padding: 0;
+}
+.review-stars li {
+  display: inline-block;
+}
+.review-stars i.fa {
+  color: #FFD203;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+.testimonial-bg-1 {
+  background: url('/wp-content/themes/wp-bootstrap-starter/img/banner-images/testimonial-bg.jpeg') no-repeat fixed center;
+  background-size: cover;
+}
+
+.circle-testimonial-item {
+  background: rgba(0,0,0,.3);
+  border: 1px dotted #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  margin-top: 30px;
+  padding: 20px 7px;
+}
+.circle-testimonial-item h4 {
+  color:#fff;
+  font-size: 18px;
+  font-style: normal;
+  text-align: right;
+  text-transform: uppercase;
+}
+.circle-testimonial-item h4 span {
+  color:#fff;
+  display: block;
+  text-transform: none;
+}
+.circle-testimonial-item img {
+  -moz-transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  background-color: #fff;
+  border-radius: 75px;
+  border: 1px solid #EAEAEA;
+  display: block;
+  height: 150px;
+  margin: 0 auto 10px;
+  padding: 5px;
+  transition: all 0.9s;
+  width: 150px;
+}
+.circle-testimonial-item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.testimonial-section-heading p {
+  font-style: normal;
+  padding: 5px 20px;
+  text-align: center;
+}
+.testimonial-slider-wrapper {
+  background-color: #222222;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 60px 0px 90px;
+  position: relative;
+}
+.testimonial-slider-wrapper.section-white {
+  background-color: #fff;
+  color: #222;
+}
+.testimonial-slider-wrapper.section-white .owl-nav div {
+  color: #222;
+}
+.testimonial-slides .owl-nav div {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  color: #ffffff;
+  font-size: 19px;
+  height: 40px;
+  line-height: 1.5;
+  margin-top:20px;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+}
+
+.testimonial-slides .owl-nav {
+  float: right;
+  margin-right: 50px;
+}
+
+.testimonial-slides .owl-nav div.owl-next {
+  margin-left: 25px;
+}
+.testimonial-slides .owl-nav div:hover {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.testimonial-slider-wrapper > h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.testimonial-slider-wrapper h4 {
+  font-size: 18px;
+  margin: 20px 0 0;
+}
+.testimonial-slider-wrapper h4 span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.testimonial-slider-wrapper ul {
+  margin-top: 15px;
+}
+.testimonial-slide-item-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.testimonial-slide-item-tablecell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.testimonial-slider-wrapper h1, .testimonial-slider-wrapper .chipsofic-subtitle {
+  color: #fff;
+}
+/*-----------------------------
+15. Contact Form Section
+-------------------------------*/
+
+.contact-info-block {
+  margin-top: 50px;
+}
+.contact-info-block ul {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+}
+.contact-info-block ul a {
+  color: #333333;
+}
+.contact-info-block ul a:hover {
+  text-decoration: none;
+}
+.contact-info-block i.fa {
+  padding-right: 9px;
+}
+.contact-info-block ul li {
+  padding-bottom: 5px;
+}
+
+.contact-form {
+  margin-top: 50px;
+}
+.contact-form label {
+  display: block;
+  font-weight: 400;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  padding: 7px;
+  width: 100%;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  border: 1px solid #FFC527;
+}
+.contact-form textarea {
+  height: 100px;
+}
+.contact-form input[type="submit"] {
+  border-radius: 3px;
+  color: #ffffff;
+  width: 100%;
+}
+.contact-form input[type="submit"]:hover {
+  background-color: #222;
+  color: #ffffff;
+}
+.contact-form.wide-form {
+  border: none;
+  box-shadow: none;
+  color: #222;
+}
+.contact-form.wide-form input[type="submit"] {
+  border: 1px solid #fff;
+}
+/*-----------------------------
+14. Google Map
+-------------------------------*/
+
+.gmap_outer {
+  background-color: rgb(238, 238, 238);
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+.gmap {
+  padding: 0;
+  height: 450px;
+}
+.gmap.border {
+  box-shadow: -2px 0 9px -2px #dddddd;
+  background: #ffffff;
+  padding: 8px;
+}
+#map1 {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+/*-----------------------------
+17. Footer Section
+-------------------------------*/
+
+/* 17.1 Footer Top */
+.site-footer{
+    background-color: #2C2141 !important;
+}
+.footer-logo {
+  display: inline-block;
+  margin: 0;
+  max-width: 300px;
+  padding: 0 30px 10px 0;
+}
+.footer-social i.fa, i.fab {
+  font-size: 22px;
+}
+.footer-social i.fa:hover, i.fab:hover {
+  color: #ffffff;
+}
+.footer-social ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.footer-social ul li:last-child {
+  margin-right: 0px;
+}
+.footer-top-area {
+  border-top: 5px solid #FFC527;
+}
+.footer-top-area,
+.footer-top-area a {
+  color: #ffffff;
+}
+.footer-top-area a h5{
+  font-size: 12px;
+  color: white;
+}
+.footer-widget {
+  padding: 40px 0;
+}
+.footer-widget i.fa, i.fab {
+  color: #E5097F;
+  padding-right: 5px;
+}
+.footer-widget ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.footer-widget a:hover {
+  color: #E5097F;
+  text-decoration: none;
+}
+
+/* 17.2 Copyright */
+
+.footer-copyright-area,
+.footer-made-by
+{
+  color: #ffffff;
+  padding: 5px 0 15px;
+}
+.footer-copyright-area a,
+.footer-made-by a
+{
+  color: #ffffff;
+}
+.footer-copyright-area a:hover,
+.footer-made-by a:hover
+{
+  color:#E5097F;
+  text-decoration: none;
+}
+.footer-made-by .link-content{
+	display: flex;
+	justify-content: center;
+}
+.go-top {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 2em;
+  color: white;
+  display: none;
+  font-size: 12px;
+  padding: 1em;
+  position: fixed;
+  right: 2em;
+  text-decoration: none;
+  z-index: 999;
+}
+
+.go-top:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 530px){
+	.footer-menu ul{
+		text-align: left;
+	}
+	.footer-menu ul>li a{
+		padding: 15px;
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 477px){
+	.footer-menu ul{
+		text-align: left;
+		display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+	}
+	.footer-menu ul>li a{
+		padding: 12px;
+		font-size: 12px;
+	}
+	.footer-menu>li a:after{
+		content: '|';
+		display: block;
+		width: 5px;
+	}
+}
+@media screen and (max-width: 767px){
+	.top-area h1 {
+   word-break: break-all;
+}
+	.dropdown-menu{
+		background-color: black;
+		color: white;
+		margin-left: 0;
+	}
+	.dropdown-toggle::after{
+		content: none;
+	}
+	.sclicknav_nav, .slicknav_nav ul{
+		/*overflow: unset !important;*/
+	}
+	.single-product div#main{
+  margin: 14px 0;
+	/*width: 100%;*/
+}
+}

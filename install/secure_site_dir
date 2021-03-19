@@ -1,0 +1,39 @@
+#!/bin/bash
+
+##
+ # This file is part of the UbuntuServerSetup project.
+ #
+ # (c) 2017 OQILA COMPUTER, LLC.
+ # @author Fazliddin Juraev
+ # 
+ # For the full copyright and license information, please view the LICENSE file
+ # that was distributed with this source code.
+ ##
+ 
+# Sets correct permissions to site directory.
+
+f=`basename "$0"`
+
+if [ $# -eq 0 ]
+then
+    echo -e "Usage: $f site_path"
+    exit 1;
+fi
+
+site_path=$1
+
+read -p "Do you really want to secure path $site_path (y/n): " answer
+    if [ "$answer" == "y" ]
+    then
+        chown -R $USER $site_path
+        chgrp -R www-data $site_path
+        chmod -R 750 $site_path
+        chmod g+s $site_path # All new files and subdirectories will have group of the $site_path
+        find $site_path -type d -exec chmod g+s '{}' \;
+
+        chmod g+w -R "${site_path}/wp-content"
+    else
+        exit 1;
+    fi
+
+exit 0;
